@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Fondo transparente para un logo versátil -->
+  <g id="logo-container">
+    <!-- Hexágono exterior recortado / estilizado -->
+    <path d="M 230 40 L 400 135 L 400 240 M 400 310 L 400 370 L 230 465 L 60 370 L 60 135 Z" 
+          fill="none" stroke="#41C34A" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+    
+    <!-- Barra del gráfico 1 (Izquierda) -->
+    <rect x="110" y="275" width="45" height="70" fill="#1B5E20" />
+    
+    <!-- Barra del gráfico 2 (Centro-Izquierda) -->
+    <rect x="195" y="175" width="45" height="235" fill="#1B5E20" />
+    
+    <!-- Barra del gráfico 3 (Centro-Derecha) -->
+    <rect x="280" y="75" width="45" height="380" fill="#1B5E20" />
+    
+    <!-- Barra del gráfico 4 (Derecha) -->
+    <rect x="365" y="165" width="45" height="200" fill="#1B5E20" />
+    
+    <!-- Línea de corte / separación dinámica para la flecha (máscara o trazo de fondo) -->
+    <!-- En lugar de una máscara compleja, dibujamos la flecha verde claro cruzando el diseño -->
+    <path d="M 50 370 C 120 310, 240 250, 420 110" 
+          fill="none" stroke="#41C34A" stroke-width="36" stroke-linecap="round"/>
+          
+    <!-- Cabeza de la flecha -->
+    <polygon points="380,85 450,90 440,160" fill="#41C34A" />
+  </g>
+</svg>

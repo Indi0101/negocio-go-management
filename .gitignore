@@ -1,0 +1,66 @@
+# Dependencias y compilaciones de React / Vite
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vite/
+
+# Compilaciones de Java / Maven
+target/
+*.class
+
+# Configuracion local y variables de entorno
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.local
+
+# Registros
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editores e IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.sts4-cache/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# Oracle Wallet / credenciales Oracle
+Wallet_*/
+wallet/
+*.p12
+*.jks
+cwallet.sso
+ewallet.p12
+keystore.jks
+truststore.jks
+
+# Claves y certificados sensibles
+*.key
+*.pem
+credentials/
+secrets/

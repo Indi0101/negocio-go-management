@@ -1,0 +1,32 @@
+@reference "../index.css";
+
+@layer components {
+  .fn-panel { @apply rounded-2xl border border-stroke bg-white; }
+  .fn-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-50; }
+  .fn-secondary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-stroke bg-white px-4 py-3 text-sm font-medium text-ink transition-colors hover:bg-brand-50 disabled:opacity-50; }
+  .fn-label { @apply mb-2 block text-sm font-medium text-ink; }
+  .fn-field { @apply min-h-12 w-full min-w-0 rounded-xl border border-stroke bg-white px-3.5 py-3 text-base text-ink transition-colors placeholder:text-subtle focus:border-brand-600 focus:outline-none focus:ring-3 focus:ring-brand-100; }
+  .fn-caption { @apply text-sm leading-6 text-subtle; }
+  .fn-page-title { @apply text-2xl font-semibold tracking-tight text-ink sm:text-3xl; }
+  .fn-nav-link { @apply flex min-h-12 items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-subtle transition-colors hover:bg-brand-50 hover:text-brand-800; }
+  .fn-nav-link.active { @apply bg-brand-50 text-brand-800; }
+  .fn-icon-button { @apply inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-stroke bg-white text-subtle transition-colors hover:bg-brand-50 hover:text-brand-800 disabled:opacity-40; }
+  .fn-module { @apply flex min-h-40 min-w-0 flex-col items-start rounded-2xl border border-stroke bg-white p-4 text-left transition-colors sm:p-5; }
+  .fn-module:not(:disabled):hover { @apply border-brand-200 bg-brand-50; }
+  .fn-module:disabled { @apply bg-white/65; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .finann-ui *, .finann-ui *::before, .finann-ui *::after { transition: none !important; animation: none !important; }
+}
+
+/* Adaptación del perfil existente al espacio de trabajo compartido. */
+.finann-ui .mp-app { background: transparent; padding: 0; }
+.finann-ui .mp-shell { max-width: 56rem; }
+.finann-ui .mp-brand { display: none; }
+@media (min-width: 1024px) {
+  .finann-ui .mp-content:has(> .mp-person) { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.25rem; padding: 2rem; }
+  .finann-ui .mp-content > h1, .finann-ui .mp-content > .mp-subtitle,
+  .finann-ui .mp-content > .mp-person, .finann-ui .mp-content > .mp-logout,
+  .finann-ui .mp-content > .mp-notice { grid-column: 1 / -1; }
+  .finann-ui .mp-content > .mp-panel:has(.mp-details) { grid-row: span 2; }
+}
